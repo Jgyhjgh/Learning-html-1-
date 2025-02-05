@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0a0a0a;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.rate-container {
+    text-align: center;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px cyan;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.star {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s, transform 0.3s;
+    margin: 0 5px;
+}
+
+.star:hover,
+.star.active {
+    color: #ffcc00;
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+    transform: scale(1.2);
+}
+
+.emoji {
+    font-size: 2rem;
+    margin-top: 20px;
+    transition: opacity 0.3s;
+}
+
+@keyframes neonGlow {
+    0% { text-shadow: 0 0 10px cyan; }
+    50% { text-shadow: 0 0 20px cyan, 0 0 30px cyan; }
+    100% { text-shadow: 0 0 10px cyan; }
+}
+
+h1 {
+    animation: neonGlow 2s infinite;
+}
